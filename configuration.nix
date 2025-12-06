@@ -1,12 +1,7 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
+  imports = [
       ./hardware-configuration.nix
     ];
 
@@ -14,12 +9,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  networking.hostName = "nixos"; 
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -48,8 +38,6 @@
     variant = "";
   };
 
-# services.defaultUserShell = pkgs.fish;
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zedddie = {
     isNormalUser = true;
     description = "zedddie";
@@ -58,8 +46,8 @@
     shell = pkgs.fish;
   };
 
-  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
   programs = {
   fish.enable = true;
   firefox.enable = true;
@@ -68,20 +56,16 @@
 services.keyd = {
   enable = true;
   keyboards = {
-    # The name is just the name of the configuration file, it does not really matter
     default = {
-      ids = [ "*" ]; # what goes into the [id] section, here we select all keyboards
-      # Everything but the ID section:
+      ids = [ "*" ]; 
       settings = {
-        # The main layer, if you choose to declare it in Nix
         main = {
-          capslock = "esc"; # you might need to also enclose the key in quotes if it contains non-alphabetical symbols
+          capslock = "esc"; 
 	  escape = "capslock";
         };
         otherlayer = {};
       };
-      extraConfig = ''
-        # put here any extra-config, e.g. you can copy/paste here directly a configuration, just remove the ids part
+      extraConfig = ''there can be path to config
       '';
     };
   };
@@ -95,8 +79,6 @@ alsa.support32Bit = true;
 pulse.enable = true;
 };
   programs.hyprland.enable = true;
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
   neovim
   zig
@@ -141,7 +123,6 @@ firefox
   nerd-fonts.noto
   nerd-fonts.hack
   nerd-fonts.ubuntu
-  # nerd-fonts
   ];
 
 environment.sessionVariables.NIXOS_OZONE_WL = "1";
