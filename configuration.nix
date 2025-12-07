@@ -81,14 +81,17 @@ pulse.enable = true;
   programs.hyprland.enable = true;
   environment.systemPackages = with pkgs; [
   neovim
+  obsidian 
+  unzip
   zig
   fish
   fishPlugins.done
   fishPlugins.fzf-fish
   fishPlugins.forgit
-  fishPlugins.git-abbr
+  keychain
   fishPlugins.plugin-git
   fzf
+  vesktop
   fishPlugins.grc
   fishPlugins.z
   grc
@@ -112,6 +115,9 @@ pulse.enable = true;
   kitty
 firefox
   ];
+virtualisation.docker = {
+	enable = true;
+};
   programs.steam = {
   enable = true;
   dedicatedServer.openFirewall = true;
