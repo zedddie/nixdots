@@ -134,6 +134,8 @@ irssi
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
 rust-analyzer
+libunwind
+binutils
   ];
 virtualisation.docker = {
 	enable = true;
