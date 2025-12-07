@@ -53,6 +53,20 @@
   firefox.enable = true;
   };
 
+security.sudo.extraRules = [
+  {
+    users = [ "zedddie" ];
+    commands = [
+      {
+        command = "/usr/bin/cp /etc/nixos/configuration.nix /home/zedddie/nixdots/";
+        options = [ "NOPASSWD" ];
+      }
+    ];
+  }
+];
+
+
+
 services.keyd = {
   enable = true;
   keyboards = {
