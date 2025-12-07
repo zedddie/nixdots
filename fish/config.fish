@@ -5,7 +5,7 @@ set fish_greeting ""
 # end
 fish_vi_key_bindings insert
 if status is-login
-	keychain --eval $HOME/.ssh/id_ed25519 | source
+	keychain --quiet --eval $HOME/.ssh/id_ed25519 | source
 end
 if status is-interactive
     # Commands to run in interactive sessions can go here
