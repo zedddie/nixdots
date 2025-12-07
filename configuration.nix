@@ -5,19 +5,15 @@
       ./hardware-configuration.nix
     ];
 
-  # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; 
 
-  # Enable networking
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
   time.timeZone = "Europe/Warsaw";
 
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -30,12 +26,6 @@
     LC_PAPER = "en_US.UTF-8";
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
-  };
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
   };
 
   users.users.zedddie = {
@@ -65,8 +55,6 @@ command = "/run/current-system/sw/bin/cp /etc/nixos/configuration.nix /home/zedd
   }
 ];
 
-
-
 services.keyd = {
   enable = true;
   keyboards = {
@@ -89,7 +77,7 @@ services.i2pd = {
   enable = true;
   outTunnels = { 
     IRC2 = { 
-      destination = "irc.acetone.i2p"
+      destination = "irc.acetone.i2p";
       type = "client";
       address = "127.0.0.1";
       port = 6669;
@@ -104,6 +92,7 @@ alsa.enable = true;
 alsa.support32Bit = true;
 pulse.enable = true;
 };
+
   programs.hyprland.enable = true;
   environment.systemPackages = with pkgs; [
   neovim
@@ -141,6 +130,10 @@ pulse.enable = true;
   kitty
 firefox
 irssi
+  ];
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+rust-analyzer
   ];
 virtualisation.docker = {
 	enable = true;
