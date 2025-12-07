@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer to run dotfiles sync every 2 hours
+
+[Timer]
+OnBootSec=10min
+OnUnitActiveSec=2h
+Unit=dotfiles-sync.service
+
+[Install]
+WantedBy=default.target
