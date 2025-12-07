@@ -15,6 +15,9 @@ abbr -a gc git commit -m
 abbr -a ga git add
 
 abbr -a c cargo
+if set -q SSH_AUTH_SOCK
+        systemctl --user import-environment SSH_AUTH_SOCK
+    end
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
