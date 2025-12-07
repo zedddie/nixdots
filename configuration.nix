@@ -85,6 +85,18 @@ services.keyd = {
   };
 };
 
+services.i2pd = {
+  enable = true;
+  outTunnels = { 
+    IRC2 = { 
+      destination = "irc.acetone.i2p"
+      type = "client";
+      address = "127.0.0.1";
+      port = 6669;
+      destinationPort = 6667;
+    };
+  };
+};
 services.pulseaudio.enable = false;
 services.pipewire = {
 enable = true;
@@ -128,6 +140,7 @@ pulse.enable = true;
   wl-clipboard
   kitty
 firefox
+irssi
   ];
 virtualisation.docker = {
 	enable = true;

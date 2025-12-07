@@ -3,4 +3,5 @@ Description=run dotfiles sync script
 
 [Service]
 Type=oneshot
+PassEnvironment=SSH_AUTH_SOCK
 ExecStart=%h/nixdots/scripts/dotfiles_sync.sh
