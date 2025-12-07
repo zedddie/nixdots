@@ -1,0 +1,99 @@
+* {
+    font-size: 15px;
+    font-family: "CodeNewRoman Nerd Font Propo";
+    color: #ccbdff;
+}
+
+window#waybar {
+    all: unset;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    padding: 5px;
+}
+
+.modules-left {
+    margin-left: 5px;
+}
+
+.modules-right {
+    margin-right: 5px;
+}
+
+tooltip {
+    background: alpha(#000, 0.45);
+    border: none;
+    outline: none;
+}
+
+#workspaces {
+    padding: 0px 5px;
+    text-shadow: none;
+}
+
+#workspaces button {
+    all: unset;
+    margin: 0px 3px;
+    padding: 0px 2px;
+    background: #a48bff;
+    border-radius: 50%;
+    transition: all 0.15s;
+    min-width: 15px;
+    color: #0b0b0e;
+}
+
+#workspaces button.active {
+    background: #ccbdff;
+}
+
+#bluetooth,
+#network,
+#battery,
+#group-expand,
+#custom-expand,
+#cpu,
+#memory,
+#temperature {
+    padding: 0px 5px;
+    transition: all 0.3s ease;
+}
+
+#battery.charging {
+    color: #aef9db;
+}
+
+#battery.warning:not(.charging),
+#battery.critical:not(.charging) {
+    color: #f278c8;
+}
+
+#battery.critical:not(.charging) {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#pulseaudio {
+    padding-right: 10px;
+}
+
+#bluetooth:hover,
+#network:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#pulseaudio:hover,
+#custom-expand:hover {
+    transition: 0.2s;
+}
+
+#workspaces button:hover {
+    background: #d8b3ff;
+    color: #0b0b0e;
+}
