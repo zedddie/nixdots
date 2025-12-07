@@ -58,7 +58,7 @@ security.sudo.extraRules = [
     users = [ "zedddie" ];
     commands = [
       {
-        command = "/usr/bin/cp /etc/nixos/configuration.nix /home/zedddie/nixdots/";
+command = "/run/current-system/sw/bin/cp /etc/nixos/configuration.nix /home/zedddie/nixdots/";
         options = [ "NOPASSWD" ];
       }
     ];

@@ -13,8 +13,7 @@ cp -r tmux $DOTFILES_DIR
 cp -r hypr $DOTFILES_DIR
 cp -r waybar $DOTFILES_DIR
 cp -r fish $DOTFILES_DIR
-sudo cp /etc/nixos/configuration.nix $DOTFILES_DIR 
-
+sudo /run/current-system/sw/bin/cp /etc/nixos/configuration.nix $DOTFILES_DIR
 # cp $HOME/.config/Cursor/User/keybindings.json $DOTFILES_DIR/cursor/
 # cp $HOME/.config/Cursor/User/settings.json $DOTFILES_DIR/cursor/
 
