@@ -8,8 +8,8 @@ if status is-login
 	keychain --quiet --eval $HOME/.ssh/id_ed25519 | source
 end
 
-abbr -a snxs sudo nixos-rebuild switch
-abbr -a secn sudoedit /etc/nixos/configuration.nix
+abbr -a snrs sudo nixos-rebuild switch
+abbr -a senx sudoedit /etc/nixos/configuration.nix
 abbr -a gst git status
 abbr -a g git 
 abbr -a gp git push
