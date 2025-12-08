@@ -178,7 +178,9 @@ pulse.enable = true;
   kitty
 firefox
 irssi
-      rust-analyzer
+  rust-analyzer
+  gemini-cli-bin
+opencode 
   ];
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
