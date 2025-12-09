@@ -1,7 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export SSH_AGENT_PID:1571
-SETUVAR --export SSH_AUTH_SOCK:/home/zedddie/\x2essh/agent/s\x2ePv4fiUmGtK\x2eagent\x2eWGChiXbjBg
+SETUVAR --export SSH_AGENT_PID:1584
+SETUVAR --export SSH_AUTH_SOCK:/home/zedddie/\x2essh/agent/s\x2ePv4fiUmGtK\x2eagent\x2e58fWfp6URm
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
 SETUVAR Z_DATA:/home/zedddie/\x2elocal/share/z/data
