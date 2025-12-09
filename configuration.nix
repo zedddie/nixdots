@@ -101,9 +101,15 @@ services.keyd = {
     };
   };
 };
-
 services.i2pd = {
   enable = true;
+  upnp = true;
+  proto.http.enable = true;
+  proto.httpProxy = {
+			enable = true;
+			port = 4444;
+      address = "127.0.0.1";
+		};
   outTunnels = { 
     IRC2 = { 
       destination = "irc.acetone.i2p";
@@ -181,6 +187,8 @@ irssi
   rust-analyzer
   gemini-cli-bin
 opencode 
+		weechat
+		tor-browser
   ];
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
