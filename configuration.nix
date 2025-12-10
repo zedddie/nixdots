@@ -103,7 +103,6 @@ services.keyd = {
 };
 services.i2pd = {
   enable = true;
-  upnp = true;
   proto.http.enable = true;
   proto.httpProxy = {
 			enable = true;
