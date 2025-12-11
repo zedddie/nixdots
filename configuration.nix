@@ -42,7 +42,7 @@
   users.users.zedddie = {
     isNormalUser = true;
     description = "zedddie";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [ ];
     shell = pkgs.fish;
   };
@@ -177,14 +177,13 @@
     wl-clipboard
     kitty
     firefox
-    irssi
     rust-analyzer
     gemini-cli-bin
     opencode
-    weechat
     gajim
     pkg-config
     nixfmt
+    brightnessctl
   ];
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [ libunwind binutils ];
