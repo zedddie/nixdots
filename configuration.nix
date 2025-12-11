@@ -97,21 +97,12 @@
     };
   };
   services.i2pd = {
-    enable = true;
+    enable = false;
     proto.http.enable = true;
     proto.httpProxy = {
       enable = true;
       port = 4444;
       address = "127.0.0.1";
-    };
-    outTunnels = {
-      IRC2 = {
-        destination = "irc.acetone.i2p";
-        type = "client";
-        address = "127.0.0.1";
-        port = 6669;
-        destinationPort = 6667;
-      };
     };
   };
   services.pulseaudio.enable = false;
@@ -146,7 +137,6 @@
     neovim
     obsidian
     unzip
-    zig
     fish
     fishPlugins.done
     fishPlugins.fzf-fish
@@ -164,8 +154,6 @@
     swww
     dunst
     telegram-desktop
-    cargo
-    rustc
     spotify
     fastfetch
     pavucontrol
@@ -177,13 +165,13 @@
     wl-clipboard
     kitty
     firefox
-    rust-analyzer
     gemini-cli-bin
     opencode
     gajim
     pkg-config
     nixfmt
     brightnessctl
+    zed-editor
   ];
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [ libunwind binutils ];
