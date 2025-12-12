@@ -152,6 +152,7 @@
     waybar
     rofi
     swww
+    obs-studio
     dunst
     telegram-desktop
     spotify
