@@ -97,7 +97,7 @@
     };
   };
   services.i2pd = {
-    enable = false;
+    enable = true;
     proto.http.enable = true;
     proto.httpProxy = {
       enable = true;
