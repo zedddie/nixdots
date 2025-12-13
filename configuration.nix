@@ -173,6 +173,9 @@
     nixfmt
     brightnessctl
     zed-editor
+    woeusb-ng # delete later
+    ntfs3g # delete later
+    exfatprogs
   ];
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [ libunwind binutils ];
