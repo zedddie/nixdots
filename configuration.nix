@@ -173,8 +173,7 @@
     nixfmt
     brightnessctl
     zed-editor
-    woeusb-ng # delete later
-    ntfs3g # delete later
+    markdownlint-cli
     exfatprogs
   ];
   programs.nix-ld.enable = true;
