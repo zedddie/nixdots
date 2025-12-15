@@ -189,6 +189,10 @@
     nerd-fonts.droid-sans-mono
     nerd-fonts.noto
     nerd-fonts.hack
+    dancing-script
+    terminus_font
+    nerd-fonts.bigblue-terminal
+    nerd-fonts.open-dyslexic
     nerd-fonts.ubuntu
   ];
 
