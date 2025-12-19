@@ -142,6 +142,7 @@
     fishPlugins.fzf-fish
     fishPlugins.forgit
     keychain
+    htop
     fishPlugins.plugin-git
     fzf
     vesktop
