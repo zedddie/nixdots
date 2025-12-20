@@ -28,7 +28,7 @@
     "nvidiafb"
   ];
 
-  networking.hostName = "nixos";
+  networking.hostName = "pcnix";
 
   networking.networkmanager.enable = true;
 
