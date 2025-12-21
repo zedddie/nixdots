@@ -116,7 +116,7 @@
     };
   };
   services.i2pd = {
-    enable = true;
+    enable = false;
     proto.http.enable = true;
     proto.httpProxy = {
       enable = true;
@@ -246,6 +246,11 @@
     zed-editor
     markdownlint-cli
     exfatprogs
+    mangohud
+    protonup-qt
+    lutris
+    bottles
+    heroic
   ];
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
@@ -257,6 +262,7 @@
   };
   programs.steam = {
     enable = true;
+    gamescopeSession.enable = true;
     dedicatedServer.openFirewall = true;
   };
   fonts.fontconfig.enable = true;
