@@ -205,6 +205,7 @@
     dmenu
     st
 
+    htop
     neovim
     obsidian
     unzip
