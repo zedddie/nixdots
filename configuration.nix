@@ -192,8 +192,19 @@
     package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
 
+  # services.xserver.enable = true;
+  # services.xserver.displayManager.startx.enable = true;
+  # services.xserver.windowManager.dwm = {
+  #   enable = true;
+  #   package = pkgs.dwm.overrideAttrs {
+  #     src = ./dwm;
+  #   };
+  # };
   programs.hyprland.enable = true;
   environment.systemPackages = with pkgs; [
+    dmenu
+    st
+
     neovim
     obsidian
     unzip
