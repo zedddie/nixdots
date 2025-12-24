@@ -211,6 +211,9 @@
     unzip
     fish
     fishPlugins.done
+
+    hackneyed
+
     fishPlugins.fzf-fish
     fishPlugins.forgit
     keychain
@@ -285,6 +288,11 @@
   # environment.sessionVariables.EDITOR = "nvim";
 
   environment.sessionVariables = {
+    XCURSOR_THEME = "hackneyed";
+    XCURSOR_SIZE = "24";
+    GTK_CURSOR_THEME = "hackneyed";
+    GTK_CURSOR_SIZE = "24";
+
     WLR_NO_HARDWARE_CURSORS = "1";
     LIBVA_DRIVER_NAME = "nvidia";
     XDG_SESSION_TYPE = "wayland";
