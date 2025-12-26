@@ -8,6 +8,13 @@ if status is-login
 	keychain --quiet --eval $HOME/.ssh/id_ed25519 | source
 end
 
+function load_codeberg
+    if not ssh-add -l | grep -q "id_codeberg"
+        ssh-add ~/.ssh/id_codeberg
+    end
+end
+
+abbr -a lc load_codeberg
 abbr -a ns nix-shell --command fish
 abbr -a snrs sudo nixos-rebuild switch
 abbr -a senx sudoedit /etc/nixos/configuration.nix
