@@ -207,7 +207,6 @@
 
     htop
     neovim
-    obsidian
     unzip
     fish
     fishPlugins.done
@@ -219,7 +218,6 @@
     keychain
     fishPlugins.plugin-git
     fzf
-    vesktop
     fishPlugins.grc
     fishPlugins.z
     grc
@@ -229,7 +227,6 @@
     swww
     obs-studio
     dunst
-    telegram-desktop
     spotify
     fastfetch
     pavucontrol
@@ -255,6 +252,7 @@
     lutris
     bottles
     heroic
+    emacs-nox
   ];
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
